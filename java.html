@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health & Wellness</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://media.licdn.com/dms/image/C5112AQF0iN_3gSJcEg/article-cover_image-shrink_720_1280/0/1564737781229?e=2147483647&v=beta&t=xgw6I6ttyK8UDrbog58rMTX7sD3MuarXMm_Abvyytu8');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 160px 0;
+            text-align: center;
+            width: 100%;
+        }
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: right;
+        }
+        nav a[href="#about"],
+        nav a[href="#signin"],
+        nav a[href="#subscriptions"],
+        nav a[href="#desiredresults"] {
+            background-color: #386a8b;
+            color: #fff;
+        }
+        nav a {
+            text-decoration: none;
+            color: #241e1e;
+            padding: 10px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #18d89b;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            padding: 50px 0;
+        }
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #a41818;
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            color: #070707;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .names {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+            display: block;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 1000%;
+            margin: 0 auto 30px;
+            display: block;
+        }
+        .profile-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .profile {
+            flex-basis: 30%;
+        }
+        .quote {
+            font-style: italic;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .quote-author {
+            font-style: normal;
+            font-weight: bold;
+        }
+        .info-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .info-text {
+            flex-basis: 50%;
+            text-align: left;
+        }
+        .info-image {
+            flex-basis: 40%;
+        }
+        .info-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .btn {
+            background-color: #163edf;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mental Health & Wellness</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#signin">Sign In</a>
+        <a href="#subscriptions">Subscriptions</a>
+        <a href="#desiredresults">Visit Our Desired Results</a>
+    </nav>
+    <div class="container" id="about">
+        <h2>About Us</h2>
+        <div class="profile-container">
+            <div class="profile">
+                <img src="C:\MMM hackathon\IMG_20240316_152454.jpg" alt="Raghvendra Singh" class="profile-image">
+                <span class="names">Raghvendra Singh</span>
+            </div>
+            <div class="profile">
+                <img src="C:\MMM hackathon\IMG-20240308-WA002.jpg" alt="Rajnish Yadav" class="profile-image">
+                <span class="names">Rajnish Yadav</span>
+            </div>
+            <div class="profile">
+                <img src="C:\MMM hackathon\WhatsApp Image 2024-03-16 at 15.37.58_d67fa3a.jpg" alt="Satyam Tiwari" class="profile-image">
+                <span class="names">Satyam Tiwari</span>
+            </div>
+        </div>
+        <p>Welcome to our mental health and wellness platform, where we, Raghvendra Singh, Rajnish Yadav, and Satyam Tiwari, are committed to guiding you towards a life of mental resilience and well-being. In a world where anxiety and depression are prevalent, we offer a sanctuary—a place where effective techniques like meditation and yoga meet compassionate support. Our platform isn't just about coping; it's about thriving. We curate content that addresses the nuanced challenges of mental health, empowering you to navigate life's complexities with grace and confidence. Whether you're seeking relief from persistent anxiety or aiming to cultivate a deeper sense of inner peace, we're here to provide the tools and guidance you need to flourish.</p>
+        <p>Let's embark on a journey towards holistic well-being. With evidence-based strategies and personalized support, we're dedicated to helping you unlock your full potential and live a life filled with purpose and vitality. Welcome to a space where healing begins, and possibilities are limitless.</p>
+    </div>
+    <!-- Depression Section -->
+    <div class="container" id="depression">
+        <h2>Depression</h2>
+        <div class="info-section">
+            <div class="info-text">
+                <p class="quote">"The only thing more exhausting than being depressed is pretending that you're not."</p>
+                <p class="quote-author">- Unknown</p>
+                <p>Depression is a mental health disorder characterized by persistent sadness, loss of interest or pleasure in activities, and other symptoms that affect how you feel, think, and handle daily activities.</p>
+            </div>
+            <div class="info-image">
+                <img src="https://img.freepik.com/free-photo/memory-loss-dementia-alzheimer-concept-created-with-generative-ai-technology_185193-110044.jpg" alt="Depression Image">
+            </div>
+        </div>
+    </div>
+    <!-- Depression in the World Section -->
+    <div class="container" id="world-depression">
+        <h2>Depression in the World</h2>
+        <div class="info-section">
+            <div class="info-text">
+                <p class="quote">"You are not alone, and you are not to blame. Just as the sun rises every day, so too can you rise from the darkness, shining your light into the world."</p>
+                <p class="quote-author">- Unknown</p>
+                <p>Depression affects people of all ages, from all walks of life, and in all countries around the world. It is a leading cause of disability worldwide, and it can have a significant impact on individuals, families, and communities.</p>
+            </div>
+            <div class="info-image">
+                <img src="https://res.cloudinary.com/junomedical/image/upload/v1491312364/depression_sckhnv.jpg" alt="World Depression Image">
+            </div>
+        </div>
+    </div>
+    <!-- Depression in India Section -->
+    <div class="container" id="india-depression">
+        <h2>Depression in India</h2>
+        <div class="info-section">
+            <div class="info-text">
+                <p class="quote">"Mental health needs a great deal of attention. It's the final taboo and it needs to be faced and dealt with."</p>
+                <p class="quote-author">- Adam Ant</p>
+                <p>India, like many other countries, faces significant challenges related to mental health, including depression. Stigma, lack of awareness, and limited access to mental health services are some of the barriers that prevent people from seeking help.</p>
+            </div>
+            <div class="info-image">
+                <img src="https://www.oneindia.com/img/2017/04/depression1-08-1491615142.jpg" alt="India Depression Image">
+            </div>
+        </div>
+    </div>
+    <!-- "Know Your Mind Health" section -->
+    <div class="container">
+        <h2>Know Your Mind Health</h2>
+        <p>In today's world, where mental health struggles touch the lives of one in every 3rd individuals, it becomes increasingly vital to comprehend our own mental condition. This awareness spans across age groups, highlighting the significance of acknowledging and tending to our mental well-being for a harmonious and enriched existence. Depression is different from regular mood changes and feelings about everyday life. It can affect all aspects of life, including relationships with family, friends, and community. It can result from or lead to problems at school and at work.</p>
+        <p>Gain insights into your mental health by taking our quick assessment:</p>
+        <button onclick="navigateToAssessment()">Let's know</button>
+    </div>
+
+    <script>
+        function navigateToAssessment() {
+            window.location.href = "quizzz.html";
+        }
+    </script>
+    <!-- Other Sections -->
+    <div class="container" id="signin">
+        <h2>Sign In</h2>
+        <p>Please sign in to access exclusive content and features.</p>
+        <button class="btn">Sign In</button>
+    </div>
+    <div class="container" id="subscriptions">
+        <h2>Subscriptions</h2>
+        <p>Subscribe to unlock premium content and personalized experiences.</p>
+        <button class="btn">Subscribe Now</button>
+    </div>
+    <div class="container" id="desiredresults">
+        <h2>Visit Our Desired Results</h2>
+        <p>Explore our success stories and testimonials from our satisfied users.</p>
+        <button class="btn">Explore Now</button>
+    </div>
+</body>
+</html>

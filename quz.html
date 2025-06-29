@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Assessment</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/originals/53/cf/05/53cf05d08ff05f7963e5fe9bb591f25d.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        ul li img {
+            margin-right: 10px;
+            max-width: 80px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Assessment</h1>
+        <p>Answer the following questions to assess your mental health status:</p>
+        <div id="quiz">
+            <p id="question"></p>
+            <button onclick="answer('yes')">Yes</button>
+            <button onclick="answer('no')">No</button>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>Your Mental Health Review</h2>
+            <p id="score"></p>
+            <p id="review"></p>
+            <h3>Recommended Exercises and Yoga Techniques:</h3>
+            <ul id="recommendations"></ul>
+        </div>
+    </div>
+
+    <script>
+        let questions = [
+            "Do you often feel anxious or worried?",
+            "Do you have trouble sleeping?",
+            "Do you experience mood swings?",
+            "Do you feel overwhelmed easily?",
+            "Do you have difficulty concentrating?",
+            "Do you have low energy levels?",
+            "Do you avoid social situations?",
+            "Do you experience panic attacks?",
+            "Do you have a poor appetite or overeat?",
+            "Do you have trouble making decisions?",
+            "Do you often feel irritable or angry?",
+            "Do you feel disconnected from others?",
+            "Do you experience physical symptoms like headaches or stomachaches frequently?",
+            "Do you engage in self-destructive behaviors?",
+            "Do you have a history of trauma or abuse?",
+            "Do you feel hopeless or helpless?",
+            "Do you have trouble coping with stress?",
+            "Do you experience racing thoughts?",
+            "Do you have a history of substance abuse?",
+            "Do you have thoughts of self-harm or suicide?"
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const questionDiv = document.getElementById('question');
+            if (questionDiv) {
+                questionDiv.textContent = questions[currentQuestionIndex];
+            }
+        }
+
+        function answer(choice) {
+            if (choice === 'no') {
+                score += 5;
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            const quizDiv = document.getElementById('quiz');
+            const resultDiv = document.getElementById('result');
+
+            if (quizDiv) {
+                quizDiv.style.display = 'none';
+            }
+
+            if (resultDiv) {
+                resultDiv.style.display = 'block';
+            }
+
+            const scoreDisplay = document.getElementById('score');
+            if (scoreDisplay) {
+                scoreDisplay.textContent = `Your score: ${score}%`;
+            }
+
+            const reviewDisplay = document.getElementById('review');
+            if (reviewDisplay) {
+                if (score < 30) {
+                    reviewDisplay.textContent = 'Your mental health score is low. Please seek help from a psychiatrist.';
+                } else if (score >= 30 && score < 50) {
+                    reviewDisplay.textContent = 'Your mental health score is moderate. Consider daily exercise, good nutrients, and yoga.';
+                    displayRecommendations([
+                        { name: "Running", image: "https://i.pinimg.com/564x/23/dd/a6/23dda6b8072a2baa3c30ba6310989b90.jpg" },
+                        { name: "Lifting weights", image: "https://i.pinimg.com/564x/ed/08/da/ed08da8f216e00a3181d36685890ded6.jpg" },
+                        { name: "Playing basketball", image: "https://i.pinimg.com/564x/50/68/80/506880cf23e91a34204a8d1f01d0f99c.jpg" },
+                        { name: "Downward Facing Dog Pose (Adho Mukha Svanasana)", image: "https://i.pinimg.com/564x/2e/6b/92/2e6b92f66e506b212be85d610c0e2a97.jpg" }
+                    ]);
+                } else if (score >= 50 && score < 70) {
+                    reviewDisplay.textContent = 'Your mental health score is moderate. Consider taking good nutritious food and practicing yoga and meditation techniques.';
+                    displayRecommendations([
+                        { name: "Shoulderstand (Salamba Sarvangasana)", image: "https://i.pinimg.com/564x/34/c5/d7/34c5d77c9125fb7b1873ebabcf6d0cd7.jpg" },
+                        { name: "Sukhasana", image: "https://i.pinimg.com/564x/bf/0f/17/bf0f17b98d7aee818d03d37f6b6ef2ab.jpg" },
+                        { name: "Pranayama", image: "https://i.pinimg.com/564x/12/59/33/125933c909b4249a6ec0452eb89367bf.jpg" }
+                    ]);
+                } else {
+                    reviewDisplay.textContent = 'Congratulations! Your mental health score is good. Keep up the healthy habits.';
+                    displayRecommendations([
+                        { name: "Good exercises", image: "https://www.rei.com/dam/up_2017-06-exercises.jpg?t=ea16by9lg" },
+                        { name: "Stretching", image: "https://personallevelfitness.com/wp-content/uploads/2015/04/yoga-600x450.jpg" },
+                        { name: "Having good company", image: "https://previews.123rf.com/images/leikapro/leikapro1809/leikapro180902708/108131393-a-company-of-good-looking-friends-is-laughing-and-socialising-in-the-nice-summer-cafe-river-is-in.jpg" },
+                        { name: "Daily pranayama and yoga", image: "https://static.toiimg.com/thumb/msid-59237366,width-1280,height-720,resizemode-4/59237366.jpg" }
+                    ]);
+                }
+            }
+        }
+
+        function displayRecommendations(recommendations) {
+            const recommendationsList = document.getElementById('recommendations');
+            if (recommendationsList) {
+                recommendations.forEach(recommendation => {
+                    const listItem = document.createElement('li');
+                    const image = document.createElement('img');
+                    image.src = recommendation.image;
+                    image.alt = recommendation.name;
+                    listItem.appendChild(image);
+                    const exerciseName = document.createElement('span');
+                    exerciseName.textContent = recommendation.name;
+                    listItem.appendChild(exerciseName);
+                    recommendationsList.appendChild(listItem);
+                });
+            }
+        }
+
+        // Load the first question when the page loads
+        window.onload = loadQuestion;
+    </script>
+</body>
+</html>

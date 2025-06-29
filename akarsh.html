@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fitness & Sports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ecdfdf;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        .testimonial-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .mission-statement {
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .team-member {
+            width: 250px;
+            margin: 10px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .team-member::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        .team-member h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .team-member p {
+            font-size: 14px;
+            text-align: center;
+        }
+        .team-member:nth-child(1)::before {
+            background-image: url('3.AK.jpg');
+        }
+        .team-member:nth-child(2)::before {
+            background-image: url('2.AR.jpg');
+        }
+        .team-member:nth-child(3)::before {
+            background-image: url('1.SS.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <p class="mission-statement">At Fitness & Sports, we're dedicated to helping you achieve your fitness goals and lead a healthier lifestyle.</p>
+        <p class="mission-statement">Founded in 2023, we have quickly become a leading name in the fitness industry, known for our personalized approach and community-driven atmosphere. Whether you're a beginner or a seasoned athlete, we have something for everyone.</p>
+        <div class="team-members">
+            <div class="testimonial-slider">
+            <div class="team-member">
+                <h3>Akarsh Kumar</h3>
+                <p>Personal Trainer</p>
+            </div>
+            <div class="team-member">
+                <h3>Ananya Rai</h3>
+                <p>Nutritionist</p>
+            </div>
+            <div class="team-member">
+                <h3>Satyam Singh</h3>
+                <p>Yoga Instructor</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
